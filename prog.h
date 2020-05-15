@@ -5,14 +5,17 @@
 #include <math.h>
 #include <float.h>
 
-struct Student {
-	char* Name;
-	int Group;
-	double Rating;
-	int isElder;
+struct node {
+	double x1;
+	double y1;
+	double x2;
+	double y2;
+	int index;
+	double k;
+	double b;
+	int toDelete;
+	struct node* nextNode;
 };
 
-void quick_sortG(struct Student**, int, int);
-void quick_sortR(struct Student**, int, int);
-int progItSelf(const char* fileName, struct Student*** ans, int* k1);
+int progItSelf(struct node*, int*);
 int AutoTest();
