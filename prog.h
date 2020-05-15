@@ -18,4 +18,3 @@ struct node {
 };
 
 int progItSelf(struct node*, int*);
-int AutoTest();

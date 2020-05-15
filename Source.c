@@ -7,9 +7,6 @@ int main(void) {
 	struct node* cur = NULL;
 	struct node* temp;
 	int curindex = 1;
-	if (!AutoTest()) {
-		return 0;
-	}
 	if ((input = fopen("input.txt","r")) == NULL) {
 		printf("Can't open file!");
 		return 1;

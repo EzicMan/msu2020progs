@@ -212,7 +212,3 @@ int progItSelf(struct node* firstLine, int* mI1) {
 		}
 	}
 }
-
-int AutoTest() {
-	
-}
