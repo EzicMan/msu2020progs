@@ -38,7 +38,7 @@ int progItSelf(struct node* firstLine, int* mI1) {
 				k = (y2 - y1) / (x2 - x1);
 				b = y2 - k * x2;
 				firstLine->toDelete = 0;
-				if (firstLine->k == k && firstLine->b == b && (firstLine->x1 > x1&& firstLine->x1 < x2 || firstLine->x2 > x1&& firstLine->x2 < x2)) {
+				if (firstLine->k == k && firstLine->b == b && (firstLine->x1 >= x1&& firstLine->x1 <= x2 || firstLine->x2 >= x1&& firstLine->x2 <= x2)) {
 					if (firstLine->x2 <= x2 && firstLine->x1 >= x1) {
 						firstLine->toDelete = 1;
 					}
@@ -58,7 +58,7 @@ int progItSelf(struct node* firstLine, int* mI1) {
 				cur = firstLine->nextNode;
 				while (cur != firstLine) {
 					cur->toDelete = 0;
-					if (cur->k == k && cur->b == b && (cur->x1 > x1&& cur->x1 < x2 || cur->x2 > x1&& cur->x2 < x2)) {
+					if (cur->k == k && cur->b == b && (cur->x1 >= x1&& cur->x1 <= x2 || cur->x2 >= x1&& cur->x2 <= x2)) {
 						if (cur->x2 <= x2 && cur->x1 >= x1) {
 							cur->toDelete = 1;
 						}
