@@ -8,8 +8,10 @@
 struct node {
 	double x1;
 	double y1;
+	int inc1;
 	double x2;
 	double y2;
+	int inc2;
 	int index;
 	double k;
 	double b;
@@ -17,4 +19,4 @@ struct node {
 	struct node* nextNode;
 };
 
-int progItSelf(struct node*, int*);
+struct node* progItSelf(int*);
